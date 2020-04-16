@@ -24,6 +24,7 @@ class CreateProductsTable extends Migration
             $table->decimal('sale_price', 10, 2)->nullable();
             $table->tinyInteger('publication_status')->default(1);
             $table->timestamps();
+            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
         });
     }
 
