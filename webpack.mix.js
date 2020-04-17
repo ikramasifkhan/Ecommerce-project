@@ -17,7 +17,7 @@ mix.sass('resources/sass/app.scss', 'public/css/app.css')
         'resources/css/style.css'
     ], 'public/css/all.css')
     .scripts([
-        'resources/js/jquery.min.js',
-        'resources/js/bootstrap.bundle.min.js'
+        'resources/js/jquery-3.4.1.slim.min.js',
+        'resources/js/bootstrap.bundle.min.js',
     ], 'public/js/app.js')
     .version();
