@@ -4,6 +4,6 @@
         <a href="#">Back to top</a>
       </p>
     <p> &copy;{{config('app.name')}} {{date('y')}}</p>
-      <p>New to Bootstrap? <a href="https://getbootstrap.com/">Visit the homepage</a> or read our <a href="/docs/4.4/getting-started/introduction/">getting started guide</a>.</p>
+      <p>Read our <a href="">privacy policy</a> or <a href="">Contact us</a></p>
     </div>
   </footer>
