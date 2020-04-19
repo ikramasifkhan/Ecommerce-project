@@ -9,6 +9,7 @@ use Spatie\MediaLibrary\HasMedia\HasMediaTrait;
 class Product extends Model implements HasMedia
 {
     use HasMediaTrait;
+    protected $guarded=[];
     /**
      * The "booted" method of the model.
      *
