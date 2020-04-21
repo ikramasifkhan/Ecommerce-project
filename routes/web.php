@@ -23,4 +23,8 @@ Route::namespace('Frontend')->group(function () {
         'uses'=>'SmartShopController@index',
         'as'=>'/'
     ]);
+    Route::get('/product/details/{slug}',[
+        'uses'=>'ProductController@showDetails',
+        'as'=>'product.details'
+    ]);
 });
