@@ -15,7 +15,7 @@ class ProductTabaleSeeder extends Seeder
         factory(Product::class, 10)->create();
         $products = Product ::select('id')->get();
 
-        $url = 'https://lorempixel.com/640/480/?30114';
+        $url = 'https://lorempixel.com/640/480/?44404';
         foreach($products as $product){
             $product->addMediaFromUrl($url)->toMediaCollection('products');
         }
