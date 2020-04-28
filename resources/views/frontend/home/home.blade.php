@@ -16,9 +16,19 @@
                             <p class="card-text"><a href="{{route('product.details', $product->slug)}}" class="text-dark" style="text-decoration: none">{{$product->name}}</a></p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">Add to cart</button>
+                                    <form action="{{route('cart.add')}}" method="POST">
+                                        @csrf
+                                        <input type="hidden" value="{{$product->id}}" name="product_id">
+                                         <button type="submit" class="btn btn-sm btn-outline-secondary">Add to cart</button>
+                                    </form>
                                 </div>
-                                <strong class="text-muted">BTD {{$product->price}}</strong>
+                                @if ($product->sale_price!= null && $product->sale_price>0)
+                                    <strong class="text-muted">BTD {{$product->sale_price}} <del> {{$product->price}}</del></strong>
+                                @else
+                                    <strong class="text-muted"> BTD {{$product->price}}</strong>
+                                @endif
+
+
                             </div>
                         </div>
                     </div>

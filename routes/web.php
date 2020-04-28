@@ -27,4 +27,22 @@ Route::namespace('Frontend')->group(function () {
         'uses'=>'ProductController@showDetails',
         'as'=>'product.details'
     ]);
+    Route::post('/cart/add', [
+        'uses'=>'CartController@addCart',
+        'as'=>'cart.add'
+    ]);
+    Route::get('/cart',[
+        'uses'=>'CartController@showcart',
+        'as'=>'cart.show'
+    ]);
+
+    Route::post('/cart/remove',[
+        'uses'=>'CartController@removeCart',
+        'as'=>'cart.remove'
+    ]);
+
+    Route::get('/cart/clear', [
+        'uses'=>'CartController@clearCart',
+        'as'=>'cart.clear'
+    ]);
 });
